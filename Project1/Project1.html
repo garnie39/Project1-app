@@ -1,1 +1,106 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Project1.css" />
+    <title>HangMan</title>
+    <script src="Project1.js" defer></script>
+  </head>
+  <body>
+    <div id="gameContainer" class="gameContainer">
+      <div id="game" class="game">
+        <header id="header" class="header">
+          <h1 id="hangMan" class="hangMan">Hang Man</h1>
+          <button id="icon" class="icon" onclick="howToPlay()"></button>
+        </header>
+        <div id="boardContainer" class="boardContainer">
+            <svg height="400" width="400" class="hangManContainer">
+                <!-- stage -->
+                <line x1="50" y1="20" x2="250" y2="20" />
+                <line x1="250" y1="20" x2="250" y2="50" />
+                <line x1="50" y1="20" x2="50" y2="380" />
+                <line x1="50" y1="380" x2="120" y2="380" />
+                <!-- head -->
+                <circle cx="250" cy="100" r="50" class="bodyPart"/>
+                <!-- body -->
+                <line x1="250" y1="150" x2="250" y2="250" class="bodyPart" />
+                <!-- arms -->
+                <line x1="250" y1="180" x2="300" y2="230" class="bodyPart" />
+                <line x1="250" y1="180" x2="200" y2="230" class="bodyPart" />
+                <!-- legs -->
+                <line x1="250" y1="250" x2="200" y2="350" class="bodyPart" />
+                <line x1="250" y1="250" x2="300" y2="350" class="bodyPart" />
+              </svg>
+          <div id="board" class="board">
+            <div class="square l1" id="1"></div>
+            <div class="square l1" id="2"></div>
+            <div class="square l1" id="3"></div>
+            <div class="square l1" id="4"></div>
+            <div class="square l1" id="5"></div>
+            <div class="square l2" id="6"></div>
+            <div class="square l2" id="7"></div>
+            <div class="square l2" id="8"></div>
+            <div class="square l2" id="9"></div>
+            <div class="square l2" id="10"></div>
+            <div class="square l3" id="11"></div>
+            <div class="square l3" id="12"></div>
+            <div class="square l3" id="13"></div>
+            <div class="square l3" id="14"></div>
+            <div class="square l3" id="15"></div>
+            <div class="square l4" id="16"></div>
+            <div class="square l4" id="17"></div>
+            <div class="square l4" id="18"></div>
+            <div class="square l4" id="19"></div>
+            <div class="square l4" id="20"></div>
+            <div class="square l5" id="21"></div>
+            <div class="square l5" id="22"></div>
+            <div class="square l5" id="23"></div>
+            <div class="square l5" id="24"></div>
+            <div class="square l5" id="25"></div>
+            <div class="square l6" id="26"></div>
+            <div class="square l6" id="27"></div>
+            <div class="square l6" id="28"></div>
+            <div class="square l6" id="29"></div>
+            <div class="square l6" id="30"></div>
+          </div>
+        </div>
+        <div id="keyboardContainer" class="keyboardContainer">
+            <div class="keyboardRow">
+              <button data-keyboard="q">Q</button>
+              <button data-keyboard="w">W</button>
+              <button data-keyboard="e">E</button>
+              <button data-keyboard="r">R</button>
+              <button data-keyboard="t">T</button>
+              <button data-keyboard="y">Y</button>
+              <button data-keyboard="u">U</button>
+              <button data-keyboard="i">I</button>
+              <button data-keyboard="o">O</button>
+              <button data-keyboard="p">P</button>
+            </div>
+            <div class="keyboardRow">
+              <button data-keyboard="a">A</button>
+              <button data-keyboard="s">S</button>
+              <button data-keyboard="d">D</button>
+              <button data-keyboard="f">F</button>
+              <button data-keyboard="g">G</button>
+              <button data-keyboard="h">H</button>
+              <button data-keyboard="j">J</button>
+              <button data-keyboard="k">K</button>
+              <button data-keyboard="l">L</button>
+            </div>
+            <div class="keyboardRow">
+                <button data-keyboard="enter" class="wide-button">ENTER</button>
+                <button data-keyboard="z">Z</button>
+                <button data-keyboard="x">X</button>
+                <button data-keyboard="c">C</button>
+                <button data-keyboard="v">V</button>
+                <button data-keyboard="b">B</button>
+                <button data-keyboard="n">N</button>
+                <button data-keyboard="m">M</button>
+                <button data-keyboard="del" class="wide-button">DELETE</button>
+              </button>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

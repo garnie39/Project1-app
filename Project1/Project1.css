@@ -1,0 +1,78 @@
+body {
+  height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: cornsilk;
+}
+.gameContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+  display: grid
+  grid-template-columns: 3, 1fr;
+  border-bottom: 1px solid rgb(219, 189, 105);
+}
+.hangMan {
+  color: rgb(231, 110, 77);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+}
+.icon {
+  
+}
+.boardContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.square {
+  border: 2px solid rgb(219, 189, 105);
+  min-width: 60px;
+  min-height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hangManContainer {
+  fill: transparent;
+  stroke: chocolate;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.keyboardContainer {
+  height: 200px;
+}
+.keyboardRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+.keyboardRow button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 50px;
+  cursor: pointer;
+  background-color: chocolate;
+  color: darksalmon;
+  flex-grow: 1;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+}
