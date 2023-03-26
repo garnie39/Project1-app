@@ -52,8 +52,13 @@ header {
   border: 2px solid rgb(219, 189, 105);
   min-width: 60px;
   min-height: 60px;
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: bold;
+  color: darkorange;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hangManContainer {
   fill: transparent;
