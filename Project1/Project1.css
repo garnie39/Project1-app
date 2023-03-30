@@ -66,9 +66,9 @@ header {
   stroke-width: 4px;
   stroke-linecap: round;
 }
-/* .bodyPart { */
-/* display: none; */
-/* } */
+.bodyPart {
+  display: none;
+}
 .keyboardContainer {
   height: 200px;
 }
