@@ -3,34 +3,21 @@ let wordGuessed = []; //should be all letters
 let allWord = []; // single word for each row
 let space = 1;
 const randomWord = validWords[Math.floor(Math.random() * validWords.length)];
-console.log(randomWord);
-console.log(wordGuessed);
 // -- KEYBOARD BUTTON
 const keysButton = document.querySelectorAll(".keyboardRow button");
 // -- LINK THE INPUT FROM KEYBOARD TO THE SQUARES
-// function currentWord() {
-// const numWordGuessed = wordGuessed.length;
-// return wordGuessed[numWordGuessed - 1];
-// }
 function inputGuessWord(keyButton) {
   const word = wordGuessed;
   console.log(`word ${word}`);
   if (word && word.length < 30) {
     console.log(word);
-    word.push(keyButton);
+    word.push(keyButton); //push letters into the square
     if (word.length % 5 == 0) {
       allWord = "";
       let startIndex = word.length - 5;
       let endIndex = word.length;
-      let randomWordCounter = 0;
       for (let x = startIndex; x < endIndex; x++) {
         allWord += word[x];
-        if (word[x] == randomWord[randomWordCounter]) {
-          // assign green to the key with id x+1
-        } else if (randomWord.includes(word[x])) {
-          // assign gray to the kwy with id x+1
-        }
-        randomWordCounter++;
       }
     }
     // -- LINK THE INPUT FROM KEYBOARD TO THE SQUARES
@@ -46,14 +33,42 @@ function inputGuessWord(keyButton) {
     }
   }
 }
+// give color to the currect letters
+function colorCheck() {
+  const word = wordGuessed;
+  let startIndex = word.length - 5;
+  let endIndex = word.length;
+  let randomWordCounter = 0;
+  for (let x = startIndex; x < endIndex; x++) {
+    allWord += word[x];
+    if (word[x] == randomWord[randomWordCounter]) {
+      //check if the letter are in the correct location and match with the ramdomWord
+      // assign orange to the key with id x+1
+      let id = startIndex + randomWordCounter + 1;
+      document.getElementById(id).classList.add("c-orange");
+    } else if (randomWord.includes(word[x])) {
+      //check if the letter are correct but in the wrong location
+      // assign gold to the key with id x+1
+      let id = startIndex + randomWordCounter + 1;
+      document.getElementById(id).classList.add("c-gold");
+    }
+    randomWordCounter++;
+  }
+}
+// Endgame
+
 function checkWord() {
   currentRowNum = wordGuessed.length / 5;
   if (allWord === randomWord) {
-    window.alert("Congratulation! You Win");
-    // end game
+    // endGame
   } else {
-    window.alert("Keep it up!");
     //hangman link hangman line with currentRowNum
+    const bodyPart = document.querySelectorAll(".bodyPart");
+    for (let i = 0; i < currentRowNum; i++) {
+      if (currentRowNum !== randomWord) {
+        bodyPart[i].style.display = "block";
+      }
+    }
     if (currentRowNum === 6) {
       // end game
     }
@@ -66,6 +81,7 @@ for (let i = 0; i < keysButton.length; i++) {
     console.log(allWord);
     if (keyButton === "enter" && allWord.length === 5) {
       checkWord();
+      colorCheck(); //appear once click "enter"
     } else if (keyButton === "enter" && allWord.length !== 5) {
       window.alert("Word need to be 5 letters");
     } else if (keyButton === "del") {
@@ -85,3 +101,5 @@ for (let i = 0; i < keysButton.length; i++) {
     }
   };
 }
+
+function restart() {}

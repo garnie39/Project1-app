@@ -9,6 +9,23 @@
   </head>
   <body>
     <div id="popUp" class="popUp">
+      <button class="btn-popup" id="open-popup" onclick="howToPlay()">PLAY GAME</button>
+      <div id="howTo" class="model">
+        <div class="howToSquare" id="howToSquare">
+          <div class="example-square" id="orange">G</div>
+          <div class="example-square" id="gold">N</div>
+          </div>
+          <div class="explanation" id="explanation">
+          <p class="paraOrange" id="paraOrange"></p>
+          <button class="letStart" id="letStart">Let's Play!</button>
+          </div>
+        </div>
+        <div id="endGame" class="endGame">
+          <p id="won" class="won">Congratulation! You Won!</p>
+          <p id="lose" class="lose">Sorry! You migth win next round!</p>
+          <button class="tryAgain" id="tryAgain">Try Again</button>
+        </div>
+      </div>
     </div>
     <div id="gameContainer" class="gameContainer">
       <div id="game" class="game">

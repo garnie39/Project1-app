@@ -60,6 +60,15 @@ header {
   justify-content: center;
   align-items: center;
 }
+.c-orange {
+  background-color: rgb(245, 133, 59);
+  color: rgb(255, 244, 212);
+  font-display: inherit;
+}
+.c-gold {
+  background-color: rgb(255, 208, 100);
+  color: chocolate;
+}
 .hangManContainer {
   fill: transparent;
   stroke: chocolate;
