@@ -4,35 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="Project1.css" />
     <title>HangMan</title>
+    <!-- <script  src="popup.js" defer></script> -->
     <script  src="word.js"></script>
     <script src="Project1.js" defer></script>
   </head>
   <body>
-    <div id="popUp" class="popUp">
-      <button class="btn-popup" id="open-popup" onclick="howToPlay()">PLAY GAME</button>
-      <div id="howTo" class="model">
-        <div class="howToSquare" id="howToSquare">
-          <div class="example-square" id="orange">G</div>
-          <div class="example-square" id="gold">N</div>
-          </div>
-          <div class="explanation" id="explanation">
-          <p class="paraOrange" id="paraOrange"></p>
-          <button class="letStart" id="letStart">Let's Play!</button>
-          </div>
-        </div>
-        <div id="endGame" class="endGame">
-          <p id="won" class="won">Congratulation! You Won!</p>
-          <p id="lose" class="lose">Sorry! You migth win next round!</p>
-          <button class="tryAgain" id="tryAgain">Try Again</button>
-        </div>
-      </div>
-    </div>
     <div id="gameContainer" class="gameContainer">
       <div id="game" class="game">
         <header id="header" class="header">
-          <p></p>
+          <button id="restart" class="restart" onclick="restart()">Retry</button>
           <h1 id="hangMan" class="hangMan">Hang Man</h1>
-          <button id="icon" class="icon" onclick="howToPlay()">?</button>
+          <button id="icon" class="icon">?</button>
         </header>
         <div id="boardContainer" class="boardContainer">
             <svg height="400" width="400" class="hangManContainer">

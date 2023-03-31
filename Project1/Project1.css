@@ -5,7 +5,7 @@ body {
   background-color: cornsilk;
 }
 .gameContainer {
-  display: flex;
+  position: flex;
   height: 100%;
   align-items: center;
   flex-direction: column;
@@ -14,6 +14,18 @@ header {
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid rgb(219, 189, 105);
+}
+.restart {
+  height: 50px;
+  cursor: pointer;
+  justify-content: flex-start;
+  color: rgb(209, 125, 101);
+  border: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  background-color: cornsilk;
 }
 .hangMan {
   color: rgb(231, 110, 77);
@@ -26,12 +38,12 @@ header {
   height: 50px;
   cursor: pointer;
   justify-content: flex-start;
-  color: rgb(231, 110, 77);
+  color: rgb(209, 125, 101);
   border: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: bolder;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: cornsilk;
 }
 .boardContainer {
@@ -79,24 +91,25 @@ header {
   display: none;
 }
 .keyboardContainer {
-  height: 200px;
+  height: 300px;
 }
 .keyboardRow {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto 8px;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto 10px;
   touch-action: manipulation;
 }
 .keyboardRow button {
   font-family: inherit;
   font-weight: bold;
+  font-size: medium;
   border: 0;
   padding: 0;
   height: 50px;
   cursor: pointer;
   background-color: chocolate;
-  color: darksalmon;
+  color: rgb(255, 227, 161);
   flex-grow: 1;
   margin-right: 6px;
   border-radius: 4px;

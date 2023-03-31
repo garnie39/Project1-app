@@ -1,8 +1,10 @@
+// function howToPlay() {}
 let currentRowNum = 1;
 let wordGuessed = []; //should be all letters
 let allWord = []; // single word for each row
 let space = 1;
 const randomWord = validWords[Math.floor(Math.random() * validWords.length)];
+console.log(randomWord);
 // -- KEYBOARD BUTTON
 const keysButton = document.querySelectorAll(".keyboardRow button");
 // -- LINK THE INPUT FROM KEYBOARD TO THE SQUARES
@@ -55,12 +57,10 @@ function colorCheck() {
     randomWordCounter++;
   }
 }
-// Endgame
-
 function checkWord() {
   currentRowNum = wordGuessed.length / 5;
   if (allWord === randomWord) {
-    // endGame
+    alert("CONGRATULATION! You won!");
   } else {
     //hangman link hangman line with currentRowNum
     const bodyPart = document.querySelectorAll(".bodyPart");
@@ -70,7 +70,7 @@ function checkWord() {
       }
     }
     if (currentRowNum === 6) {
-      // end game
+      alert("Sorry! You might win next turn!");
     }
   }
 }
@@ -78,7 +78,6 @@ function checkWord() {
 for (let i = 0; i < keysButton.length; i++) {
   keysButton[i].onclick = ({ target }) => {
     const keyButton = target.getAttribute("data-keyboard");
-    console.log(allWord);
     if (keyButton === "enter" && allWord.length === 5) {
       checkWord();
       colorCheck(); //appear once click "enter"
@@ -91,7 +90,6 @@ for (let i = 0; i < keysButton.length; i++) {
         wordGuessed.pop();
         allWord = allWord.substring(0, allWord.length - 2);
         const spaceEl = document.getElementById(String(space));
-        console.log(spaceEl);
         spaceEl.textContent = "";
         // -- need to remove word from array in js
         spaceEl.classList.remove("word");
@@ -101,5 +99,3 @@ for (let i = 0; i < keysButton.length; i++) {
     }
   };
 }
-
-function restart() {}
