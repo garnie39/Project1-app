@@ -1,18 +1,21 @@
 // function howToPlay() {}
+
 let currentRowNum = 1;
 let wordGuessed = []; //should be all letters
 let allWord = []; // single word for each row
 let space = 1;
 const randomWord = validWords[Math.floor(Math.random() * validWords.length)];
-console.log(randomWord);
+// console.log(randomWord);
+
 // -- KEYBOARD BUTTON
 const keysButton = document.querySelectorAll(".keyboardRow button");
+
 // -- LINK THE INPUT FROM KEYBOARD TO THE SQUARES
 function inputGuessWord(keyButton) {
   const word = wordGuessed;
-  console.log(`word ${word}`);
+  // console.log(`word ${word}`);
   if (word && word.length < 30) {
-    console.log(word);
+    // console.log(word);
     word.push(keyButton); //push letters into the square
     if (word.length % 5 == 0) {
       allWord = "";
@@ -46,7 +49,7 @@ function colorCheck() {
     if (word[x] == randomWord[randomWordCounter]) {
       //check if the letter are in the correct location and match with the ramdomWord
       // assign orange to the key with id x+1
-      let id = startIndex + randomWordCounter + 1;
+      let id = startIndex + randomWordCounter + 1; // have to be + 1 because my letter start at 0
       document.getElementById(id).classList.add("c-orange");
     } else if (randomWord.includes(word[x])) {
       //check if the letter are correct but in the wrong location
@@ -61,6 +64,7 @@ function checkWord() {
   currentRowNum = wordGuessed.length / 5;
   if (allWord === randomWord) {
     alert("CONGRATULATION! You won!");
+    //planned to add popup for endgame
   } else {
     //hangman link hangman line with currentRowNum
     const bodyPart = document.querySelectorAll(".bodyPart");
@@ -71,6 +75,7 @@ function checkWord() {
     }
     if (currentRowNum === 6) {
       alert("Sorry! You might win next turn!");
+      //planned to add popup for endgame
     }
   }
 }
