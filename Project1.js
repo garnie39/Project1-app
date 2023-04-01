@@ -5,7 +5,7 @@ let wordGuessed = []; //should be all letters
 let allWord = []; // single word for each row
 let space = 1;
 const randomWord = validWords[Math.floor(Math.random() * validWords.length)];
-// console.log(randomWord);
+console.log(randomWord);
 
 // -- KEYBOARD BUTTON
 const keysButton = document.querySelectorAll(".keyboardRow button");
