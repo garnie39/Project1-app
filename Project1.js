@@ -147,7 +147,7 @@ let wordGuessed = []; //should be all letters
 let allWord = []; // single word for each row
 let space = 1;
 const randomWord = validWords[Math.floor(Math.random() * validWords.length)];
-// console.log(randomWord);
+console.log(randomWord);
 
 // -- KEYBOARD BUTTON
 const keysButton = document.querySelectorAll(".keyboardRow button");
@@ -155,7 +155,7 @@ const keysButton = document.querySelectorAll(".keyboardRow button");
 // -- LINK THE INPUT FROM KEYBOARD TO THE SQUARES
 function inputGuessWord(keyButton) {
   const word = wordGuessed;
-  // console.log(`word ${word}`);
+  console.log(`word ${word}`);
   if (word && word.length < 30) {
     // console.log(word);
     word.push(keyButton); //push letters into the square
@@ -172,7 +172,7 @@ function inputGuessWord(keyButton) {
     space = space + 1;
     spaceEl.textContent = keyButton;
   }
-  console.log(keyButton);
+  // console.log(keyButton);
   // -- store back the square for the new element
   for (let square of document.querySelectorAll(".square")) {
     if (square.textContent == keyButton) {
