@@ -8,13 +8,19 @@
     <script src="Project1.js" defer></script>
   </head>
   <body>
-    <div id="gameContainer" class="gameContainer">
+    <div id="howToContainer" class="howToContainer" style="visibility: visible;">
+      <h1 id="openPage" class="openPage">Hangman Wordle</h1>
+      <button id="howToBtn" class="howToBtn">How to play?</button>
+      <button id="playBtn" class="playBtn">Play Now</button>
+    </div>
+    <div id="gameContainer" class="gameContainer" style="visibility: hidden;">
       <div id="game" class="game">
         <header id="header" class="header">
           <button id="restart" class="restart">Retry</button>
           <h1 id="hangMan" class="hangMan">Hang Man</h1>
           <button id="icon" class="icon">?</button>
         </header>
+        <div id="pageElement" class="pageElement"></div>
         <div id="boardContainer" class="boardContainer">
             <svg height="400" width="400" class="hangManContainer">
                 <!-- stage -->

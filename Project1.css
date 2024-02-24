@@ -67,7 +67,7 @@ header {
   font-size: 40px;
   font-weight: bold;
   color: darkorange;
-
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +77,7 @@ header {
   color: rgb(255, 244, 212);
   font-display: inherit;
 }
+
 .c-gold {
   background-color: rgb(255, 208, 100);
   color: chocolate;
@@ -93,6 +94,7 @@ header {
 .keyboardContainer {
   height: 300px;
 }
+
 .keyboardRow {
   display: flex;
   justify-content: space-evenly;
@@ -108,10 +110,113 @@ header {
   padding: 0;
   height: 50px;
   cursor: pointer;
-  background-color: chocolate;
   color: rgb(255, 227, 161);
   flex-grow: 1;
   margin-right: 6px;
-  border-radius: 4px;
+  border-radius: 1rem;
   user-select: none;
+  animation-name: keyboard;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: inherit;
+}
+
+@keyframes keyboard {
+  from {
+    background-color: rgb(251, 109, 109);
+  }
+  to {
+    background-color: rgb(255, 177, 60);
+  }
+}
+
+.howToContainer {
+  animation-name: openPage;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: inherit;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.openPage {
+  align-items: center;
+  justify-items: center;
+}
+
+@keyframes openPage {
+  from {
+    color: rgb(255, 69, 159);
+  }
+  to {
+    color: rgb(255, 171, 60);
+  }
+}
+
+.howToBtn {
+  border: none;
+  border-radius: 5rem;
+  height: 50px;
+  width: 250px;
+  font-size: 25px;
+  font-family: inherit;
+  background-color: chocolate;
+  color: rgb(255, 227, 161);
+  margin: 10px;
+  cursor: pointer;
+  animation-name: btn;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: inherit;
+}
+
+@keyframes btn {
+  from {
+    background-color: rgb(255, 69, 159);
+  }
+  to {
+    background-color: rgb(255, 171, 60);
+  }
+}
+
+.resultShow {
+  height: 300px;
+  width: 300px;
+}
+
+.howTo {
+  height: 800px;
+  width: 800px;
+  border-radius: 3rem;
+  border-style: none;
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.howToDetail {
+  width: 750px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.playBtn {
+  border-style: none;
+  border-radius: 3rem;
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 25px;
+  color: rgb(255, 227, 161);
+  margin: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  animation-name: btn;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: inherit;
 }
