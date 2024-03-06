@@ -51,11 +51,9 @@ for (let i = 0; i < currentRowNum; i++) {
 ```
 ## Future improvement
 Due to tight timeline, I couldn't be able to do much for this project but here are the development list that I would like to do in the future:
-1. Pop up page on showing how to play
-2. Add function for "?" and "Retry" buttons
-3. Allow the game to provide player's score
-4. Add animation into each square
-5. Make hangman visually present
+1. Allow the game to provide player's score
+2. Add animation into each square
+3. Make hangman visually present
 
 ## Credit
 I won't be able to complete this project with out help from GA's team, so I would like to use this space to thank Vishal, Beiwei, Adora, Micheal and the team for being so patient on guiding me throughout the project.
